@@ -144,7 +144,7 @@ examples: |-
   ```
 
 include:
-  - "docs/targets.md"
+#  - "docs/targets.md"
   - "docs/terraform.md"
 
 # Contributors to this project
