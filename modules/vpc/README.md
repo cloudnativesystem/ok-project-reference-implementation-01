@@ -3,7 +3,6 @@
 # terraform-aws-vpc [![Latest Release](https://img.shields.io/github/release/cloudposse/terraform-aws-vpc.svg)](https://github.com/cloudposse/terraform-aws-vpc/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
 
-[![Cloud Posse][logo]](https://cpco.io/homepage)
 
 <!--
 
