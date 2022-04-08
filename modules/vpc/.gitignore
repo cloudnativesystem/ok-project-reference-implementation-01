@@ -1,0 +1,6 @@
+.build-harness
+.terraform
+.terraform.lock.hcl
+build-harness
+Makefile
+
