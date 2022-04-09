@@ -15,7 +15,7 @@ Terraform module to provision a VPC with Internet Gateway. Contains a submodule 
 
 
 
-It's 100% Open Source and licensed under the [APACHE2](LICENSE).
+
 
 
 
