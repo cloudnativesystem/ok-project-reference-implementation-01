@@ -32,7 +32,7 @@ Terraform module to provision a VPC with Internet Gateway. Contains a submodule 
 
 ## Security & Compliance [<img src="https://cloudposse.com/wp-content/uploads/2020/11/bridgecrew.svg" width="250" align="right" />](https://bridgecrew.io/)
 
-Security scanning is graciously provided by Bridgecrew. Bridgecrew is the leading fully hosted, cloud-native solution providing continuous Terraform security and compliance.
+Security scanning provided by Bridgecrew.
 
 | Benchmark | Description |
 |--------|---------------|
