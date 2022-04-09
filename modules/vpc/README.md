@@ -7,8 +7,10 @@
 
 
 Terraform module to provision a VPC with Internet Gateway. Contains a submodule for provisioning Interface and/or Gateway VPC Endpoints.
-Next Line
-Next Line
+```text
+Line 1
+Line 2
+```
 
 ---
 
