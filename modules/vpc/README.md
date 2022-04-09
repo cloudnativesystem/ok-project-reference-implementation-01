@@ -23,7 +23,7 @@ Terraform module to provision a VPC with Internet Gateway. Contains a submodule 
 
 
 
-We literally have [*hundreds of terraform modules*][terraform_modules] that are Open Source and well-maintained. Check them out!
+
 
 
 
