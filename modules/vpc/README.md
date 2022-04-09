@@ -7,10 +7,8 @@
 
 
 Terraform module to provision a VPC with Internet Gateway. Contains a submodule for provisioning Interface and/or Gateway VPC Endpoints.
-```html
 <a href='https://docs.aws.amazon.com/vpc/index.html'>AWS VPC Documentation</a>
 <a href='https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc'>Terraform AWS VPC Resource Documentation</a>
-```
 
 ---
 
