@@ -61,6 +61,8 @@ related:
 # Short description of this project
 description: |-
   Terraform module to provision a VPC with Internet Gateway. Contains a submodule for provisioning Interface and/or Gateway VPC Endpoints.
+  For AWS VPC Documentation <a href='https://docs.aws.amazon.com/vpc/index.html'>Click Here</a>.
+  To learn more about Terraform VPC resources <a href='https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc'>Click Here</a>.
 
 # How to use this project
 examples: |-
@@ -144,7 +146,7 @@ examples: |-
   ```
 
 include:
-  - "docs/targets.md"
+#  - "docs/targets.md"
   - "docs/terraform.md"
 
 # Contributors to this project
