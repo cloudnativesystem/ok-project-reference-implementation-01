@@ -1,12 +1,14 @@
 
 <!-- markdownlint-disable -->
-# tf-aws-vpc [![Latest Release](https://img.shields.io/github/release/cloudposse/terraform-aws-vpc.svg)](https://github.com/cloudposse/terraform-aws-vpc/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# terraform-aws-vpc [![Latest Release](https://img.shields.io/github/release/cloudposse/terraform-aws-vpc.svg)](https://github.com/cloudposse/terraform-aws-vpc/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
 
 
 
 
-This is a sample implementation of the terraform-aws-vpc module.
+This is a sample implementation of the terraform-aws-vpc module. All inputs to this
+module are provided via the vpc.tfvars file and have been initialized with sample
+values.
 
 ---
 
@@ -243,10 +245,10 @@ All other trademarks referenced herein are the property of their respective owne
   [readme_footer_link]: https://cloudposse.com/readme/footer/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/terraform-aws-vpc&utm_content=readme_footer_link
   [readme_commercial_support_img]: https://cloudposse.com/readme/commercial-support/img
   [readme_commercial_support_link]: https://cloudposse.com/readme/commercial-support/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/terraform-aws-vpc&utm_content=readme_commercial_support_link
-  [share_twitter]: https://twitter.com/intent/tweet/?text=tf-aws-vpc&url=https://github.com/cloudposse/terraform-aws-vpc
-  [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=tf-aws-vpc&url=https://github.com/cloudposse/terraform-aws-vpc
+  [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-vpc&url=https://github.com/cloudposse/terraform-aws-vpc
+  [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-vpc&url=https://github.com/cloudposse/terraform-aws-vpc
   [share_reddit]: https://reddit.com/submit/?url=https://github.com/cloudposse/terraform-aws-vpc
   [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/cloudposse/terraform-aws-vpc
   [share_googleplus]: https://plus.google.com/share?url=https://github.com/cloudposse/terraform-aws-vpc
-  [share_email]: mailto:?subject=tf-aws-vpc&body=https://github.com/cloudposse/terraform-aws-vpc
+  [share_email]: mailto:?subject=terraform-aws-vpc&body=https://github.com/cloudposse/terraform-aws-vpc
   [beacon]: https://ga-beacon.cloudposse.com/UA-76589703-4/cloudposse/terraform-aws-vpc?pixel&cs=github&cm=readme&an=terraform-aws-vpc

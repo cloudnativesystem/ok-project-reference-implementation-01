@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: tf-aws-vpc
+name: terraform-aws-vpc
 
 # Tags of this project
 tags:
@@ -60,7 +60,9 @@ related:
 
 # Short description of this project
 description: |-
-  This is a sample implementation of the terraform-aws-vpc module.
+  This is a sample implementation of the terraform-aws-vpc module. All inputs to this
+  module are provided via the vpc.tfvars file and have been initialized with sample
+  values.
 
 # How to use this project
 examples: |-
