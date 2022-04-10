@@ -67,83 +67,66 @@ description: |-
 # How to use this project
 examples: |-
   ```hcl
+  # vpc_main.tf
   module "vpc" {
-    source = "cloudposse/vpc/aws"
-    # Cloud Posse recommends pinning every module to a specific version
-    # version = "x.x.x"
-    namespace  = "eg"
-    stage      = "test"
-    name       = "app"
-    cidr_block = "10.0.0.0/16"
+
+    source = "../../modules/vpc"
+    name   = var.vpc_name
+    cidr   = var.vpc_cidr
+
+    environment = var.environment
+    vpc_name    = var.vpc_name
+
+    azs             = var.vpc_azs
+    private_subnets = var.vpc_private_subnets
+    public_subnets  = var.vpc_public_subnets
+
+    enable_s3_endpoint = var.enable_s3_endpoint
+
+    tags = var.common_tags
+
+    vpc_tags = var.vpc_tags
   }
   ```
 
-  Full example with [`terraform-aws-dynamic-subnets`](https://github.com/cloudposse/terraform-aws-dynamic-subnets.git):
+  Initial Settings Provided Via vpc.tfvars:
 
   ```hcl
-  module "vpc" {
-    source = "cloudposse/vpc/aws"
-    # Cloud Posse recommends pinning every module to a specific version
-    # version     = "x.x.x"
-    namespace  = "eg"
-    stage      = "test"
-    name       = "app"
-    cidr_block = "10.0.0.0/16"
+  # vpc.tfvars
+
+  #
+  vpc_name = "onekloud-infra-dev"
+
+  #
+  vpc_cidr = "10.155.0.0/16"
+
+  #
+  vpc_azs = ["us-east-2a"]
+
+  #
+  vpc_private_subnets = ["10.155.0.0/18"]
+
+  #
+  vpc_public_subnets = ["10.155.64.0/18"]
+
+  #
+  enable_s3_endpoint = true
+
+  #
+  vpc_tags = {
+    "Name" = "onekloud-infra-vpc-ddddev"
   }
 
-  module "dynamic_subnets" {
-    source = "cloudposse/dynamic-subnets/aws"
-    # Cloud Posse recommends pinning every module to a specific version
-    # version     = "x.x.x"
-    namespace          = "eg"
-    stage              = "test"
-    name               = "app"
-    availability_zones = ["us-west-2a","us-west-2b","us-west-2c"]
-    vpc_id             = module.vpc.vpc_id
-    igw_id             = module.vpc.igw_id
-    cidr_block         = "10.0.0.0/16"
-  }
+  #
+  dns_private_zone_name = "development.swagwatch.io."
+
+  #
+  dns_public_zone_name = "development.swagwatch.io."
+
+  #
+  dns_reverse_zone_name = "10.155.in-addr.arpa."   
   ```
 
-  Submodule for provisioning VPC Endpoints:
-
-  ```hcl
-  module "vpc_endpoints" {
-    source = "cloudposse/vpc/aws//modules/vpc-endpoints"
-    # Cloud Posse recommends pinning every module to a specific version
-    # version     = "x.x.x"
-
-    vpc_id = module.vpc.vpc_id
-
-    gateway_vpc_endpoints = {
-      "s3" = {
-        name = "s3"
-        policy = jsonencode({
-          Version = "2012-10-17"
-          Statement = [
-            {
-              Action = [
-                "s3:*",
-              ]
-              Effect    = "Allow"
-              Principal = "*"
-              Resource  = "*"
-            },
-          ]
-        })
-      }
-    }
-    interface_vpc_endpoints = {
-      "ec2" = {
-        name                = "ec2"
-        security_group_ids  = ["sg-12341234123412345"]
-        subnet_ids          = module.dynamic_subnets.private_subnet_ids
-        policy              = null
-        private_dns_enabled = false
-      }
-    }
-  }
-  ```
 
 include:
 #  - "docs/targets.md"
